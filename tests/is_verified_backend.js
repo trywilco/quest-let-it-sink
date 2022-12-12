@@ -54,12 +54,12 @@ const testUser = async () => {
   await createItem();
   const items = await getItems();
   if (items[0]?.seller?.isVerified === undefined) {
-    console.log(`=!=!=!=!= ERROR: user doesn't have the "isVerified" field`);
+    console.log(`=!=!=!=!= ERROR: the item's seller doesn't have the "isVerified" field`);
     return false;
   }
 
   if (items[0]?.seller?.isVerified !== false) {
-    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to false by default` );
+    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to false by default`);
     return false;
   }
 

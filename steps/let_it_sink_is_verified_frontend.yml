@@ -70,6 +70,10 @@ githubActions:
         testFile: mongo_seed.js
         cmd:
           - node ${testFile}
+      rails:
+        testFile: rails_seed.rb
+        cmd:
+          - /bin/bash -c "DATABASE_URL=${databaseUrl} bin/rails runner ${testFile}"
   frontend:
     capabilities:
       - jest-puppeteer
