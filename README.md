@@ -1,7 +1,7 @@
 # quest-lets-sink
 
 ## Quest Details 
-#### title: Let's sink
+#### title: Let it sink
 #### level: intermediate
 #### skills: Backend, Database, Frontend 
 #### dependencies: docker-localsetup
