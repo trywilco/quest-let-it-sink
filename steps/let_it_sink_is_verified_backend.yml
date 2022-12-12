@@ -1,4 +1,4 @@
-id: lets_sink_is_verified_backend
+id: let_it_sink_is_verified_backend
 learningObjectives:
   - Adding a new field to the DB model
   - Adding a new peoperty to the API

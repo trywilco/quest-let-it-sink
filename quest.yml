@@ -1,12 +1,12 @@
-id: lets_sink
-title: Let's sink
+id: let_it_sink
+title: Let it sink
 description: "We will learn how to add a new field to verify the authenticity of a seller on the anythink marketplace."
 level: beginner
 duration: 1.5
 steps:
-  - lets_sink_is_verified_backend
-  - lets_sink_is_verified_frontend
-  - lets_sink_culture_document
+  - let_it_sink_is_verified_backend
+  - let_it_sink_is_verified_frontend
+  - let_it_sink_culture_document
 skills:
   - frontend
   - backend

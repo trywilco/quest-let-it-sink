@@ -1,4 +1,4 @@
-# quest-lets-sink
+# quest-let-it-sink
 
 ## Quest Details 
 #### title: Let it sink
