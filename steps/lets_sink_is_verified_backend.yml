@@ -1,0 +1,70 @@
+id: lets_sink_is_verified_backend
+learningObjectives:
+  - Adding a new field to the DB model
+  - Adding a new peoperty to the API
+hints:
+  - Did add an item to the anythink website and tested your change using the API?
+  - Did you add a new field to the DB model?
+  - Does the default value of the new field is `false`?
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: "Hey, we have new ask in place! we want to know if our sellers are verified or not."
+            delay: 2000
+          - text: "To do so we will add a new field called `isVerified` to the user's model and API."
+            delay: 2000
+          - text: "**We want to make sure the each seller will be marked as not verified by default**, to prevent sellers being verified by mistake."
+            delay: 2000
+          - text: "So let's add the `isVerified` field to the user model and the `/profile/:username` API. :codeInstruction[**Open a PR**] with the change and I will review it."
+            delay: 3000
+
+githubActions:
+  backend:
+    capabilities:
+      - axios
+      - dotenv
+    testFile: "is_verified_backend.js"
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: "${eventType}"
+      cases:
+        github_pr_opened:
+          do:
+            - actionId: github_pr_comment
+              params:
+                person: head-of-rd
+                message: That was fast! I'll review the changes right away.
+        github_pr_workflow_complete_success:
+          do:
+            - actionId: bot_message
+              params:
+                person: head-of-rd
+                messages:
+                  - text: Wonderful! Looks like the API is working. Now you can :codeInstruction[**merge the PR**] and get ready for your next assignment.
+                    delay: 1300
+            - actionId: github_pr_approve
+              params:
+                person: head-of-rd
+                message: Nice! Looks like the field is in place. Now you can **merge the PR** and come **back to Snack** once you’re ready.
+        github_pr_workflow_complete_failure:
+          do:
+            - actionId: bot_message
+              params:
+                person: head-of-rd
+                messages:
+                  - text: Umm, something is off. **Make sure all checks pass** and only then try and merge the PR.
+                    delay: 1700
+                  - text: Don't hesitate to **ask for my help** by admitting that you're :input[stuck]{text="I'm stuck!"} and I'm your only hope 👼
+                    delay: 2500
+            - actionId: github_pr_reject
+              params:
+                person: head-of-rd
+                message: Umm, something is off. **Make sure all checks pass** and **only then try and merge** the PR (or you can always ask for my help on Snack).
+        github_pr_merged:
+          do:
+            - actionId: finish_step
