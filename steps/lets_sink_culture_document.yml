@@ -7,7 +7,7 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "${Lodash.startCase('123')} ${JSON.stringify(process.env)} Ok, it seems like everything is working and Enon is pleased, for now."
+          - text: "Ok, it seems like everything is working and Enon is pleased, for now."
             delay: 2000
           - text: "The last thing he wants you to do, as one of Anythink's most promising employees (out of the few that didn't quit) is to sign a document in which you commit to its new “hardcore” culture."
             delay: 4000
