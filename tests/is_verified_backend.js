@@ -15,7 +15,6 @@ const createUser = async () => {
       username: USERNAME,
       email: `${USERNAME}@wilco.work`,
       password: "wilco1234",
-      isVerified: true
     },
   };
 
@@ -32,17 +31,35 @@ const createUser = async () => {
   return userRes.data?.user?.token;
 };
 
-const getProfile = async ( username) => {
-  const results = await client.get(`/api/profiles/${username}`);
-  return results.data?.profile;
+const createItem = async () => {
+  const body = {
+    item: {
+      title: "title",
+      description: "description",
+      tag_list: ["tag1"],
+    },
+  };
+  const itemRes = await client.post(`/api/items`, body);
+  return itemRes.data?.item;
+};
+
+const getItems = async () => {
+  const results = await client.get('/api/items?limit=1000&offset=0');
+  return results.data?.items;
 };
 
 const testUser = async () => {
-  await createUser();
-  const profile = await getProfile(USERNAME);
-
-  if (profile?.isVerified !== false) {
+  const token = await createUser();
+  client.defaults.headers.common["Authorization"] = `Token ${token}`;
+  await createItem();
+  const items = await getItems();
+  if (items[0]?.seller?.isVerified === undefined) {
     console.log(`=!=!=!=!= ERROR: user doesn't have the "isVerified" field`);
+    return false;
+  }
+
+  if (items[0]?.seller?.isVerified !== false) {
+    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to false by default` );
     return false;
   }
 
