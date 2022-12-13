@@ -14,11 +14,11 @@ startFlow:
         messages:
           - text: "Hey, we have new ask in place! we want to know if our sellers are verified or not."
             delay: 2000
-          - text: "To do so we will add a new field called `isVerified` to the user's model and have it returned from API."
+          - text: "To do so we will add a new field called ${user.backend === 'python' ? '`is_verified`' : '`isVerified`'} to the user's model and have it returned from API${user.backend === 'python' ? ' (the API field should be `isVerified`, without the underscore)' : ''}."
             delay: 2000
           - text: "**We want to make sure the each seller will be marked as not verified by default**, to prevent sellers being verified by mistake."
             delay: 2000
-          - text: "So let's add the `isVerified` field to the user model and the `/items` API endpoint. :codeInstruction[**Open a PR**] with the change and I will review it."
+          - text: "So let's add the field to the user model and the `/items` API endpoint. :codeInstruction[**Open a PR**] with the change and I will review it."
             delay: 3000
 
 githubActions:
