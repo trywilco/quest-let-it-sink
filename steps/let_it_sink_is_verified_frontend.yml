@@ -1,9 +1,10 @@
 id: let_it_sink_is_verified_frontend
 learningObjectives:
   - Adding a new field to the Frontend
+  - Implementing a design for a new feature
 hints:
-  - Try to create a new item for a seller that is verified
-  - Try to create a new item for a seller that is not verified
+  - Try to create a new item for a seller that is verified, you should see a verified icon (does it match the image posted?)
+  - Try to create a new item for a seller that is not verified, you should not see an icon
 startFlow:
   do:
     - actionId: bot_message
