@@ -1,7 +1,7 @@
 id: let_it_sink
 title: Let it sink
-description: "We will learn how to add a new field to verify the authenticity of a seller on the anythink marketplace."
-level: beginner
+description: "We will learn how to add a new field across our app to verify the authenticity of a seller on the anythink marketplace."
+level: intermediate
 duration: 1.5
 steps:
   - let_it_sink_is_verified_backend
@@ -12,4 +12,4 @@ skills:
   - backend
   - database
 questDependency: docker_localsetup
-slogan: Trust them, and they will come
+slogan: The future will be weird.

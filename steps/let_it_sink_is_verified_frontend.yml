@@ -74,6 +74,10 @@ githubActions:
         testFile: rails_seed.rb
         cmd:
           - /bin/bash -c "DATABASE_URL=${databaseUrl} bin/rails runner ${testFile}"
+      python:
+        testFile: python_seed.py
+        cmd:
+          - /bin/bash -c "DATABASE_URL=${databaseUrl} python3 ${testFile}"
   frontend:
     capabilities:
       - jest-puppeteer
