@@ -41,7 +41,7 @@ def create_user_and_item(con, slug, is_verified):
     generated_user_id = row['id']
 
   item = {
-    'slug': f'slug-{slug}',
+    'slug': slug,
     'title': 'title',
     'description': ' description',
     'seller_id': generated_user_id
