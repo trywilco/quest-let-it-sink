@@ -11,14 +11,14 @@ database_url = env_var['DATABASE_URL'].replace("postgres://", "postgresql://")
 
 engine = create_engine(database_url, echo=False)
 
-user_insert_statement = text("""INSERT INTO users(username, email, salt, bio, hashed_password, isVerified) VALUES(:username, :email, :salt, :bio, :hashed_password, :isVerified)""")
+user_insert_statement = text("""INSERT INTO users(username, email, salt, bio, hashed_password, is_verified) VALUES(:username, :email, :salt, :bio, :hashed_password, :is_verified)""")
 select_last_user_id = text("""SELECT * FROM users ORDER BY id DESC LIMIT 1""")
 item_statement = text("""INSERT INTO items(slug, title, description, seller_id) VALUES(:slug, :title, :description, :seller_id)""")
 
 letters = string.ascii_lowercase
 
 
-def create_user_and_item(con, slug, isVerified):
+def create_user_and_item(con, slug, is_verified):
   # Generate random username
   random_username = ''.join(random.choice(letters) for i in range(10))
 
@@ -29,7 +29,7 @@ def create_user_and_item(con, slug, isVerified):
     'salt': 'abc',
     'bio': 'bio',
     'hashed_password': '12345689',
-    'isVerified': isVerified
+    'is_verified': is_verified
   }
 
   con.execute(user_insert_statement, **user)
