@@ -7,11 +7,13 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "Ok, it seems like everything is working and Enon is pleased, for now."
-            delay: 2000
-          - text: "The last thing he wants you to do, as one of Anythink's most promising employees (out of the few that didn't quit) is to sign a document in which you commit to its new “hardcore” culture."
+          - text: "Mr. Husk is pleased with you. In fact, he loved your performance so much that he thinks there’s no way you can maintain this level of commitment."
             delay: 4000
-          - text: "Go [here](https://anythink.wilco.gg/culture-document) to sign the document."
+          - text: "So, from what I understand, he’s about to fire you."
+            delay: 4000
+          - text: "Unless, that is, you’re willing to [sign the pledge](https://anythink.wilco.gg/culture-document) and commit to a "hardcore" work culture."
+            delay: 2000
+          - text: "So do it, :instruction[**sign [it](https://anythink.wilco.gg/culture-document) right now**]."
             delay: 2000
 trigger:
   type: user_event
