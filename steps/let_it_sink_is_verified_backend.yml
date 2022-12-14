@@ -40,7 +40,7 @@ startFlow:
             delay: 5000
           - text: "To do so, we will :instruction[**add a new field called**] ${user.backend === 'python' ? '`is_verified`' : '`isVerified`'} to the user's model ${user.database === 'postgresql' ? 'using a DB migration to add the new column to the database' : ''}, and **have it returned from API**"
             delay: 3000
-          - text: "${user.backend === 'python' ? '** '(the API field should return `isVerified`, without the underscore)**' : ''}"
+          - text: "${user.backend === 'python' ? '**(the API field should return `isVerified`, without the underscore)**' : ''}"
             delay: 2000
           - text: "**We want to make sure the each seller will be marked as not verified by default**, to prevent sellers being verified by mistake."
             delay: 3200
