@@ -17,12 +17,9 @@ item_statement = text("""INSERT INTO items(slug, title, description, seller_id) 
 
 letters = string.ascii_lowercase
 
-
 def create_user_and_item(con, slug, is_verified):
-  # Generate random username
   random_username = ''.join(random.choice(letters) for i in range(10))
 
-  # Create user dictionary
   user = {
     'username': random_username,
     'email': f'{random_username}@mail.com',
