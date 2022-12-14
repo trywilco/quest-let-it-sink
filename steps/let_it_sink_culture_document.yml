@@ -34,5 +34,5 @@ trigger:
             - text: "You can now go and **select your next assignment**"
               delay: 2500
               components:
-                - type: schedule_learning_time
-                    - actionId: finish_step
+              - type: schedule_learning_time
+      - actionId: finish_step
