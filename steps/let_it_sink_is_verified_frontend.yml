@@ -62,23 +62,8 @@ trigger:
 
 githubActions:
   backend:
-    testFile: psql.sql
-    cmd:
-      - /bin/bash -c "DATABASE_URL=${databaseUrl} ./seeds.sh"
-      - psql ${databaseUrl} -f ${testFile} -v ON_ERROR_STOP=1
-    paramsFramework:
-      node:
-        testFile: mongo_seed.js
-        cmd:
-          - node ${testFile}
-      rails:
-        testFile: rails_seed.rb
-        cmd:
-          - /bin/bash -c "DATABASE_URL=${databaseUrl} bin/rails runner ${testFile}"
-      python:
-        testFile: python_seed.py
-        cmd:
-          - /bin/bash -c "DATABASE_URL=${databaseUrl} python3 ${testFile}"
+    capabilities:
+      - seeds
   frontend:
     capabilities:
       - jest-puppeteer

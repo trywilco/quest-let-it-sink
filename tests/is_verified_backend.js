@@ -6,60 +6,37 @@ const client = axios.create({
   timeout: 10 * 1000,
 });
 
-
-const USERNAME = "usertest"
-
-const createUser = async () => {
-  const body = {
-    user: {
-      username: USERNAME,
-      email: `${USERNAME}@wilco.work`,
-      password: "wilco1234",
-    },
-  };
-
-  try {
-    const loginRes = await client.post(`/api/users/login`, body);
-    if (loginRes.data?.user?.token) {
-      return loginRes.data.user.token;
-    }
-  } catch (e) {
-    //User doesn't exists yet
-  }
-
-  const userRes = await client.post(`/api/users`, body);
-  return userRes.data?.user?.token;
-};
-
-const createItem = async () => {
-  const body = {
-    item: {
-      title: "title",
-      description: "description",
-      tag_list: ["tag1"],
-    },
-  };
-  const itemRes = await client.post(`/api/items`, body);
-  return itemRes.data?.item;
-};
-
 const getItems = async () => {
   const results = await client.get('/api/items?limit=1000&offset=0');
   return results.data?.items;
 };
 
-const testUser = async () => {
-  const token = await createUser();
-  client.defaults.headers.common["Authorization"] = `Token ${token}`;
-  await createItem();
+const testItems = async () => {
   const items = await getItems();
-  if (items[0]?.seller?.isVerified === undefined) {
+  const notVerifiedSellerItem = items.find(i => i.slug === 'not_verified_seller_item');
+  if (!notVerifiedSellerItem) {
+    console.log(`=!=!=!=!= ERROR: could not find item for non verified seller`);
+    return false;
+  }
+
+  if (notVerifiedSellerItem?.seller?.isVerified === undefined) {
     console.log(`=!=!=!=!= ERROR: the item's seller doesn't have the "isVerified" field`);
     return false;
   }
 
-  if (items[0]?.seller?.isVerified !== false) {
-    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to false by default`);
+  if (notVerifiedSellerItem?.seller?.isVerified !== false) {
+    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to "false" a non verified seller`);
+    return false;
+  }
+
+  const verifiedSellerItem = items.find(i => i.slug === 'verified_seller_item');
+  if (!verifiedSellerItem) {
+    console.log(`=!=!=!=!= ERROR: could not find item for verified seller`);
+    return false;
+  }
+
+  if (verifiedSellerItem?.seller?.isVerified !== true) {
+    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to "true" a verified seller`);
     return false;
   }
 
@@ -67,7 +44,7 @@ const testUser = async () => {
   return true;
 };
 
-testUser()
+testItems()
   .then((res) => process.exit(res ? 0 : 1))
   .catch((e) => {
     console.log("error while checking api: " + e);

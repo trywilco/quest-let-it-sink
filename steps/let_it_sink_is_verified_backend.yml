@@ -8,6 +8,20 @@ hints:
   - Does the default value of the new field is `false`?
 startFlow:
   do:
+    - actionId: github_commit_file
+      paramsFramework:
+        node:
+          file: ${seeds.js}
+          path: "backend/scripts"
+          message: "Adding seed script"
+        rails:
+          file: ${seeds.rb}
+          path: "backend/rails/db"
+          message: "Adding seed script"
+        python:
+          file: ${seeds.py}
+          path: "backend/python/app/db"
+          message: "Adding seed script"
     - actionId: bot_message
       params:
         person: head-of-rd
@@ -26,6 +40,7 @@ githubActions:
     capabilities:
       - axios
       - dotenv
+      - seeds
     testFile: "is_verified_backend.js"
 trigger:
   type: github_pr_lifecycle_status

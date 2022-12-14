@@ -1,8 +1,8 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-require("./models/User");
-require("./models/Item");
-require("./models/Comment");
+require("../models/User");
+require("../models/Item");
+require("../models/Comment");
 
 const User = mongoose.model("User");
 const Item = mongoose.model("Item");
