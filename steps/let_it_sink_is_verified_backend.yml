@@ -50,7 +50,7 @@ startFlow:
             delay: 3200
           - text: "So let's **add the field to the user model and the `/items` API endpoint.**"
             delay: 3500
-           - text: "Once you're done :instruction[**Open a PR**] with the change and I will review it."
+          - text: "Once you're done :instruction[**Open a PR**] with the change and I will review it."
             delay: 3200
 
 githubActions:
