@@ -15,7 +15,7 @@ startFlow:
             delay: 3500
           - text: "To do so, we will need to :instruction[add an image and a 'TOP SELLER' text **after** each seller name on each item on the **feed**.]. The image is located on the repo at `/public/verified_seller.svg`"
             delay: 4500
-          - text: "Here is a mock of what I need: ![](https://res.cloudinary.com/wilco/image/upload/v1670424303/chat-assets/is_verified_ui_wuemeo.png)"
+          - text: "Here is a mock of what I need: ![](https://res.cloudinary.com/wilco/image/upload/v1671029257/chat-assets/is_verified_mock_jb1co2.png)"
             delay: 3000
           - text: ":instruction[**Open a PR with those changes**] and I will check it right away."
             delay: 2500
