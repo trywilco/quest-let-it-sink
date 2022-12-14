@@ -3,7 +3,7 @@ learningObjectives:
   - Adding a new field to the DB model
   - Adding a new property to the API
 hints:
-  - Did add an item to the anythink website and tested your change using the API?
+  - Did you add an item to the Anythink website and tested your change using the API?
   - Did you add a new field to the DB model?
   - Does the default value of the new field is `false`?
 startFlow:
@@ -26,13 +26,27 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "Hey, we have new ask in place! we want to know if our sellers are verified or not."
+          - text: "."
+            delay: 3000
+          - text: "Whew, what a couple of weeks it’s been! I expected things to change when Evon Husk bought the company,"
+            delay: 3000
+          - text: "but the staggering success he’s had at reducing the employee headcount is downright amazing."
+            delay: 3000
+          - text: "So! Evon had a brilliant idea — **a new verification program to verify top sellers**"
+            delay: 3000
+          - text: "What are we verifying them based on? A list."
+            delay: 3000
+          - text: "Just to be clear, we should disregard the number of things they’ve sold and whether their identities are real. The list is all that matters."
             delay: 2000
-          - text: "To do so we will add a new field called ${user.backend === 'python' ? '`is_verified`' : '`isVerified`'} to the user's model ${user.database === 'postgresql' ? 'using a DB migration to add the new column to the database' : ''}, and have it returned from API${user.backend === 'python' ? ' (the API field should be `isVerified`, without the underscore)' : ''}."
-            delay: 4000
+          - text: "To do so, we will :instruction[**add a new field called ${user.backend === 'python' ? '`is_verified`' : '`isVerified`'}**] to the user's model${user.database === 'postgresql' ? ' using a DB migration to add the new column to the database' : ''}, and have it returned from API."
+            delay: 2000
+          - text: "${user.backend === 'python' ? '** (the API field should be `isVerified`, without the underscore)**' : ''}."
+            delay: 2000
           - text: "**We want to make sure the each seller will be marked as not verified by default**, to prevent sellers being verified by mistake."
             delay: 2000
-          - text: "So let's add the field to the user model and the `/items` API endpoint. :codeInstruction[**Open a PR**] with the change and I will review it."
+          - text: "So let's **add the field to the user model and the `/items` API endpoint.**"
+            delay: 3000
+           - text: "Once you're done :instruction[**Open a PR**] with the change and I will review it."
             delay: 3000
 
 githubActions:
@@ -60,7 +74,7 @@ trigger:
               params:
                 person: head-of-rd
                 messages:
-                  - text: Wonderful! Looks like the API is working. Now you can :codeInstruction[**merge the PR**] and get ready for your next assignment.
+                  - text: Wonderful! Looks like the API is working. Now you can :instruction[**merge the PR**] and get ready for your next assignment.
                     delay: 1300
             - actionId: github_pr_approve
               params:
@@ -74,7 +88,7 @@ trigger:
                 messages:
                   - text: Umm, something is off. **Make sure all checks pass** and only then try and merge the PR.
                     delay: 1700
-                  - text: Don't hesitate to **ask for my help** by admitting that you're :input[stuck]{text="I'm stuck!"} and I'm your only hope 👼
+                  - text: As always, don't hesitate to **ask for my help** by admitting that you're :input[stuck]{text="I'm stuck!"} and I'm your only hope 👼
                     delay: 2500
             - actionId: github_pr_reject
               params:
