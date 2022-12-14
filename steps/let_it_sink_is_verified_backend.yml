@@ -16,11 +16,11 @@ startFlow:
           message: "Adding seed script"
         rails:
           file: ${seeds.rb}
-          path: "backend/rails/db"
+          path: "backend/db"
           message: "Adding seed script"
         python:
           file: ${seeds.py}
-          path: "backend/python/app/db"
+          path: "backend/app/db"
           message: "Adding seed script"
     - actionId: bot_message
       params:
