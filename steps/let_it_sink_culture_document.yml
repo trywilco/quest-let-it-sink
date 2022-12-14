@@ -7,12 +7,16 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "Ok, it seems like everything is working and Enon is pleased, for now."
-            delay: 2000
-          - text: "The last thing he wants you to do, as one of Anythink's most promising employees (out of the few that didn't quit) is to sign a document in which you commit to its new “hardcore” culture."
+          - text: "Outstanding work! Mr. Husk is pleased with you."
+            delay: 27000
+          - text: "In fact, he loved your performance so much that he thinks there’s no way you can maintain this level of commitment."
             delay: 4000
-          - text: "Go [here](https://anythink.wilco.gg/culture-document) to sign the document."
-            delay: 2000
+          - text: "So, from what I understand, he’s about to fire you."
+            delay: 4000
+          - text: "Unless, that is, you’re willing to [sign the pledge](https://anythink.wilco.gg/culture-document) and commit to a "hardcore" work culture."
+            delay: 3400
+          - text: "So do it, :instruction[**sign [it](https://anythink.wilco.gg/culture-document) right now**]."
+            delay: 3000
 trigger:
   type: user_event
   params:
@@ -23,8 +27,12 @@ trigger:
         params:
           person: head-of-rd
           messages:
-            - text: "The board understood their mistake and now Enon Husk is being ASKED to leave. We will not be hearing from him again."
-              delay: 2000
-            - text: "As a parting gift, he leaves you this special, rare, **Let it sink achievement**."
-              delay: 2000
-      - actionId: finish_step
+            - text: "It’s a good thing you signed the pledge. Unfortunately, you did it too quickly — looks too eager. Please turn in your badge and equipment. Good bye."
+              delay: 3000
+            - text: "Nevermind that.  Evon is out, you’re hired again, good for you!✨"
+              delay: 4500
+            - text: "You can now go and **select your next assignment**"
+              delay: 2500
+              components:
+               - type: schedule_learning_time
+                 - actionId: finish_step

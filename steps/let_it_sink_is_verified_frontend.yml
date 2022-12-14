@@ -12,13 +12,13 @@ startFlow:
         person: head-of-rd
         messages:
           - text: "So, now that the backend is in place, we want to show if our sellers are verified or not in the UI."
-            delay: 2000
-          - text: "To do so we will need to add an image and the 'TOP SELLER' text **after** each seller name on each item on the **feed**. The image is located on the repo at `/public/verified_seller.svg`"
-            delay: 3000
+            delay: 3500
+          - text: "To do so, we will need to :instruction[add an image and a 'TOP SELLER' text **after** each seller name on each item on the **feed**.]. The image is located on the repo at `/public/verified_seller.svg`"
+            delay: 4500
           - text: "Here is a mock of what I need: ![](https://res.cloudinary.com/wilco/image/upload/v1671029257/chat-assets/is_verified_mock_jb1co2.png)"
-            delay: 0
-          - text: "Open a PR with those changes and I will check it right away."
-            delay: 1000
+            delay: 3000
+          - text: ":instruction[**Open a PR with those changes**] and I will check it right away."
+            delay: 2500
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
