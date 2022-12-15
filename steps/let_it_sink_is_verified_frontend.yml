@@ -11,7 +11,7 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "So, now that the backend is in place, we want to show if our sellers are verified or not in the UI."
+          - text: "So, now that the backend is in place, we want to be able to **show in the UI, if our sellers are verified or not**."
             delay: 3500
           - text: "To do so, we will need to :instruction[add an image and a 'TOP SELLER' text **after** each seller name on each item on the **feed**.]. The image is located on the repo at `/public/verified_seller.svg`"
             delay: 4500

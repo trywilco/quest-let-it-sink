@@ -28,10 +28,8 @@ startFlow:
         messages:
           - text: "https://media.giphy.com/media/vntCjF2w7DBC0/giphy.gif"
             delay: 3000
-          - text: "Whew, what a couple of weeks it’s been! I expected things to change when Evon Husk bought the company as the new CEO,"
-            delay: 4500
-          - text: "but the staggering success he’s had at reducing the employee headcount is downright amazing."
-            delay: 3500
+          - text: "Whew, what a couple of weeks it’s been! I mean, when **Evon Husk bought the company**, I expected things to change. But the staggering success he’s had at reducing the employee headcount is downright amazing."
+            delay: 5500
           - text: "So, we gathered here today because Evon had a brilliant idea — creating **a new verification program to verify top sellers**"
             delay: 4000
           - text: "What are we verifying them based on? A list."
