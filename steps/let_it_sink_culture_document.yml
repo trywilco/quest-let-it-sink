@@ -1,6 +1,6 @@
 id: let_it_sink_culture_document
 hints:
-  - Did you go to the site and signed the guidelines?
+  - Did you go to the site and sign the pledge?
 startFlow:
   do:
     - actionId: bot_message
@@ -15,7 +15,7 @@ startFlow:
             delay: 4000
           - text: 'Unless, that is, you’re willing to [sign the pledge](https://anythink.wilco.gg/culture-document) and commit to a "hardcore" work culture.'
             delay: 3400
-          - text: "So do it, :instruction[**sign [it](https://anythink.wilco.gg/culture-document) right now**]."
+          - text: "So do it, :instruction[[**sign the pledge right now**](https://anythink.wilco.gg/culture-document)."
             delay: 3000
 trigger:
   type: user_event
@@ -29,7 +29,7 @@ trigger:
           messages:
             - text: "It’s a good thing you signed the pledge. Unfortunately, you did it too quickly — looks too eager. Please turn in your badge and equipment. Good bye."
               delay: 3000
-            - text: "Nevermind that.  Evon is out, you’re hired again, good for you!✨"
+            - text: "Nevermind that. Evon is out, you’re hired again, good for you!✨"
               delay: 4500
             - text: "You can now go and **select your next assignment**"
               delay: 2500
