@@ -37,7 +37,7 @@ field to the DB model and api, and making a change on the UI.
             - Pr for example: https://github.com/ObelusFamily/Anythink-Market-a2sp4/pull/27
           - Python:
             - The user should use `alembic` to run the migration: `poetry run alembic revision --message “adding is_verified field"`
-            - Edit the migration code: with
+            - Edit the `upgrade` function in the newly created migration code as follows: 
               ```
               def upgrade() -> None:
                  op.execute('ALTER TABLE users ADD COLUMN is_verified BOOLEAN DEFAULT FALSE')
@@ -65,11 +65,10 @@ field to the DB model and api, and making a change on the UI.
                 <span style={{ paddingLeft: "8px" }}>
                   <img width="30px" src="verified_seller.svg"/> TOP SELLER
                 </span> : null}
-            </span>
 - How do users pass to the next step:
     - A test runs against their PR to verify that:
-        - An image and a text is displayed for a verified seller's item on the feed.
-        - An image and a text is **not** displayed for a non verified seller's item.
+        - An image and a text are displayed for a verified seller's item on the feed.
+        - An image and a text are **not** displayed for a non verified seller's item.
 - Hints:
 
 #### Step 3 - "let_it_sink_culture_document":
