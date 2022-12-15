@@ -8,7 +8,7 @@ startFlow:
         person: head-of-rd
         messages:
           - text: "Outstanding work! Mr. Husk is pleased with you."
-            delay: 27000
+            delay: 2700
           - text: "In fact, he loved your performance so much that he thinks there’s no way you can maintain this level of commitment."
             delay: 4000
           - text: "So, from what I understand, he’s about to fire you."
