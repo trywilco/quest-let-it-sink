@@ -15,7 +15,7 @@ startFlow:
             delay: 4000
           - text: 'Unless, that is, you’re willing to [sign the pledge](https://anythink.wilco.gg/culture-document) and commit to a "hardcore" work culture.'
             delay: 3400
-          - text: "So do it, :instruction[[**sign the pledge right now**](https://anythink.wilco.gg/culture-document)."
+          - text: "So do it, :instruction[**sign the pledge right now**](https://anythink.wilco.gg/culture-document)."
             delay: 3000
 trigger:
   type: user_event
