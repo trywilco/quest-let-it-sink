@@ -26,13 +26,13 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: "https://media.giphy.com/media/vntCjF2w7DBC0/giphy.gif"
-            delay: 3000
+          - text: "https://media.giphy.com/media/eBCnpuRGBhQGY/giphy-downsized-large.gif"
+            delay: 1500
           - text: "Whew, what a couple of weeks it’s been! I mean, when **Evon Husk bought the company**, I expected things to change. But the staggering success he’s had at reducing the employee headcount is downright amazing."
-            delay: 5500
+            delay: 4600
           - text: "So, we gathered here today because Evon had a brilliant idea — creating **a new verification program to verify top sellers**"
             delay: 4000
-          - text: "How do we intend to verify them? A list."
+          - text: "How do we intend to verify them? A list Evon made, which we know nothing about."
             delay: 3000
           - text: "Just to be clear, we should disregard the number of things they’ve sold and whether their identities are real. The list is all that matters."
             delay: 5000

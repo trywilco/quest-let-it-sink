@@ -27,6 +27,8 @@ trigger:
         params:
           person: head-of-rd
           messages:
+            - text: https://media.giphy.com/media/OxrQAuM5kKMKHn14ls/giphy.gif
+              delay: 3000
             - text: "It’s a good thing you signed the pledge. Unfortunately, you did it too quickly — looks too eager. Please turn in your badge and equipment. Good bye."
               delay: 3000
             - text: "Nevermind that. Evon is out, you’re hired again, good for you!✨"
