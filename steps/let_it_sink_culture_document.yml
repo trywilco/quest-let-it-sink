@@ -31,10 +31,16 @@ trigger:
               delay: 3000
             - text: "It’s a good thing you signed the pledge. Unfortunately, you did it too quickly — looks too eager. Please turn in your badge and equipment. Good bye."
               delay: 3000
-            - text: "Nevermind that. Evon is out, you’re hired again, good for you!✨"
+            - text: "Nevermind that. Evon ran a poll and the users of Anythink decided he should step down. You’re hired again, good for you!✨"
               delay: 4500
-            - text: "You can now go and **select your next assignment**"
-              delay: 2500
+            - text: "That said, if anything like this happens again, you probably should tell someone things are amiss."
+              delay: 7500
+            - text: "This would make you a whistleblower, and it doesn't matter how much the management will want to, turns out it won't be able to retaliate against you."
+              delay: 5000
+            - text: "You should probably know that in the [US](https://www.whistleblower.gov/) and the [EU](https://commission.europa.eu/aid-development-cooperation-fundamental-rights/your-rights-eu/protection-whistleblowers_en), there are dedicated bodies for these kinds of things."
+              delay: 4500
+            - text: "While you're waiting for the authorities to swoop in, why not **select your next assignment**?"
+              delay: 3500
               components:
                 - type: schedule_learning_time
       - actionId: finish_step
