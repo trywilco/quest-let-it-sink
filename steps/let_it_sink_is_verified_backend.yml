@@ -3,9 +3,9 @@ learningObjectives:
   - Adding a new field to the DB model
   - Adding a new property to the API
 hints:
-  - Did you add an item to the Anythink website and test your change using the API?
-  - Did you add a new field to the DB model?
-  - Is the default value of the new field `false`?
+  - You should probably start from adding an item to the Anythink website and test your change using the API.
+  - No worries, we will figure it out. try adding a new field to the DB model.
+  - Make sure that the default value of the new field `false`.
 startFlow:
   do:
     - actionId: github_commit_file
@@ -70,7 +70,7 @@ trigger:
               params:
                 person: head-of-rd
                 messages:
-                  - text: Wonderful! Looks like the API is working. Now you can :instruction[**merge the PR**] and get ready for your next assignment.
+                  - text: Wonderful! Looks like the API is working. Now you can :instruction[**merge the PR**] and get ready for the next step.
                     delay: 1300
             - actionId: github_pr_approve
               params:

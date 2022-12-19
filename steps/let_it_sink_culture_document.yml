@@ -1,6 +1,6 @@
 id: let_it_sink_culture_document
 hints:
-  - Did you go to the site and sign the pledge?
+  - Enter this website [https://anythink.wilco.gg/culture-document](https://anythink.wilco.gg/culture-document), mark the checkbox and submit it.
 startFlow:
   do:
     - actionId: bot_message

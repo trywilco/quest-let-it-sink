@@ -30,32 +30,33 @@ trigger:
             - actionId: github_pr_comment
               params:
                 person: head-of-rd
-                message: "Thanks ${user.githubuser}, I'll review the changes right away!"
+                message: "Thanks @${user.githubuser}, I'll review the changes right away!"
         github_pr_workflow_complete_success:
           do:
             - actionId: bot_message
               params:
                 person: head-of-rd
                 messages:
-                  - text: "Excellent job ${user.firstName}! You're now able to merge the PR."
+                  - text: "Looking good ${user.firstName}! You're now able to merge the PR."
                     delay: 1300
             - actionId: github_pr_approve
               params:
                 person: head-of-rd
-                message: "Excellent job ${user.githubuser}! You're now able to merge the PR."
+                message: "Looking good @${user.githubuser}! You're now able to merge the PR."
         github_pr_workflow_complete_failure:
           do:
-            - actionId: github_pr_reject
-              params:
-                person: head-of-rd
-                message: Make sure all checks pass, only then you can merge the PR.
-
             - actionId: bot_message
               params:
                 person: head-of-rd
                 messages:
-                  - text: Make sure all checks pass, only then you can merge the PR.
+                  - text: Umm, something is off. **Make sure all the checks pass** before you try to merge the PR.
                     delay: 2500
+                  - text: As always, don't hesitate to **ask for my help** by admitting that you're :input[stuck]{text="I'm stuck!"} and I'm your only hope 👼
+                    delay: 2500
+            - actionId: github_pr_reject
+              params:
+                person: head-of-rd
+                message: Umm, something is off. **Make sure all the checks pass** before you try to merge the PR. Remember, you can always ask for my help on Snack.
         github_pr_merged:
           do:
             - actionId: finish_step
