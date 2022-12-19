@@ -1,6 +1,6 @@
 id: let_it_sink
 title: Let that sink in
-description: "We'll learn how to add a new field to our app, so we can verify the authenticity of a seller in the Anythink marketplace."
+description: "Sometimes, you’re being asked to implement a new feature that has implications on both the frontend, the backend, the API, and the database. And if the feature was requested by your new CEO, you have no choice by to comply. Let it sink in, then go do what you’re told!"
 level: intermediate
 duration: 1.5
 steps:
