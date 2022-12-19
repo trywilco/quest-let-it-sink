@@ -36,7 +36,7 @@ const testItems = async () => {
   }
 
   if (verifiedSellerItem?.seller?.isVerified !== true) {
-    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to "true" a verified seller`);
+    console.log(`=!=!=!=!= ERROR: "isVerified" is not set to "true" a verified seller when calling /api/items`);
     return false;
   }
 
