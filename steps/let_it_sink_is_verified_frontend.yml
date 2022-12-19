@@ -3,17 +3,17 @@ learningObjectives:
   - Adding a new field to the Frontend
   - Implementing a design for a new feature
 hints:
-  - Try to create a new item for a seller that is verified, you should see a verified icon (does it match the image posted?)
-  - Try to create a new item for a seller that is not verified, you should not see an icon
+  - Try to create a new item for a seller that is verified. You should see a **verified** icon (does it match the image posted?)
+  - Try to create a new item for a seller that is **not verified** (you should not see an icon). 
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: head-of-rd
         messages:
-          - text: "So, now that the backend is in place, we want to be able to **show in the UI, if our sellers are verified or not**."
+          - text: "So, now that the backend is done, we want to **show in the UI, if our sellers are verified or not**."
             delay: 3500
-          - text: "To do so, we will need to :instruction[add an image and a 'TOP SELLER' text **after** each seller name on each item on the **feed**.]. The image is located on the repo at `/public/verified_seller.svg`"
+          - text: "To do so, we will need to :instruction[add an image and a 'TOP SELLER' text **after** each seller name on each item in the **feed**]. The image is located in the repo at `/public/verified_seller.svg`"
             delay: 4500
           - text: "Here is a mock of what I need: ![](https://res.cloudinary.com/wilco/image/upload/v1671029257/chat-assets/is_verified_mock_jb1co2.png)"
             delay: 3000
