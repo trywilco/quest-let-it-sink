@@ -3,7 +3,7 @@ learningObjectives:
   - Adding a new field to the DB model
   - Adding a new property to the API
 hints:
-  - You should probably start from adding an item to the Anythink website and test it by calling to http://localhost:3000/api/items, make sure you get in the responsone the `isVerified` field with a value of `true` or `false`.
+  - You should probably start from adding an item to the Anythink website and test it by calling to http://localhost:3000/api/items, make sure you get in the response the `isVerified` field with a value of `true` or `false`.
   - Go to the github actions results on your pull request, and see why it's failing.
   - Make sure that the default value of the new field `false`.
 startFlow:
