@@ -3,8 +3,8 @@ learningObjectives:
   - Adding a new field to the DB model
   - Adding a new property to the API
 hints:
-  - You should probably start from adding an item to the Anythink website and test your change using the API.
-  - No worries, we will figure it out. try adding a new field to the DB model.
+  - You should probably start from adding an item to the Anythink website and test it by calling to http://localhost:3000/api/items, make sure you get in the responsone the `isVerified` field with a value of `true` or `false`.
+  - Go to the github actions results on your pull request, and see why it's failing.
   - Make sure that the default value of the new field `false`.
 startFlow:
   do:
@@ -36,7 +36,7 @@ startFlow:
             delay: 3000
           - text: "Just to be clear, we should disregard the number of things they’ve sold and whether their identities are real. The list is all that matters."
             delay: 5000
-          - text: "To do so, we will :instruction[**add a new field called**] ${user.backend === 'python' ? '`is_verified`' : '`isVerified`'} to the User model ${user.database === 'postgresql' ? 'using a DB migration to add the new column to the database' : ''}, and **have it returned from API**${user.backend === 'python' ? '**(the API field should return `isVerified`, without the underscore)**' : ''}"
+          - text: "To do so, we will :instruction[**add a new boolean field called**] ${user.backend === 'python' ? '`is_verified`' : '`isVerified`'} to the User model ${user.database === 'postgresql' ? 'using a DB migration to add the new column to the database' : ''}, and **have it returned from API**${user.backend === 'python' ? '**(the API field should return `isVerified`, without the underscore)**' : ''}"
             delay: 3000
           - text: "To prevent sellers from being verified by mistake, we want each seller to be marked as **not verified** by default."
             delay: 3200
