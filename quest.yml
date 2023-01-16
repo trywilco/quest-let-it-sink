@@ -29,7 +29,5 @@ messages:
         delay: 5000
       - text: "You should probably know that in the [US](https://www.whistleblower.gov/) and the [EU](https://commission.europa.eu/aid-development-cooperation-fundamental-rights/your-rights-eu/protection-whistleblowers_en), there are dedicated bodies for these kinds of things."
         delay: 4500
-      - text: "While you're waiting for the authorities to swoop in, why not **select your next assignment**?"
+      - text: "That's all there is to it! You've fulfilled your responsibility and are officially done with this task".
         delay: 3500
-        components:
-          - type: schedule_learning_time
