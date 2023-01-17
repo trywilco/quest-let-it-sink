@@ -34,14 +34,15 @@ field to the DB model and api, and making a change on the UI.
           - Rails:
             - Create a new migration run from inside the docker `bin/rails generate migration add_isVerified_to_users isVerified:boolean`
             - Edit the newly create migration to add `default: false`
-            - Pr for example: https://github.com/ObelusFamily/Anythink-Market-a2sp4/pull/27
+            - PR solution: https://github.com/ObelusFamily/Anythink-Market-a2sp4/pull/27
           - Python:
-            - The user should use `alembic` to run the migration: `poetry run alembic revision --message “adding is_verified field"`
+            - The user should use `alembic` to run the migration: `poetry run alembic revision --message "adding is_verified field"`
             - Edit the `upgrade` function in the newly created migration code as follows: 
               ```
               def upgrade() -> None:
                  op.execute('ALTER TABLE users ADD COLUMN is_verified BOOLEAN DEFAULT FALSE')
-            -  and run `poetry run alembic upgrade head`
+            - and run `poetry run alembic upgrade head`
+            - PR solution: https://github.com/ObelusFamily/Anythink-Market-a2sp4/pull/34 
 
         - The user should add the `isVerified` field to the API endpoint
 - How do users pass to the next step:
