@@ -68,5 +68,4 @@ githubActions:
   frontend:
     capabilities:
       - jest-puppeteer
-      - "puppeteer@18.1.0"
     testFile: "is_verified_frontend.test.js"
