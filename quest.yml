@@ -1,5 +1,5 @@
 id: let_it_sink
-title: Let It Sink
+title: Let it sink
 subtitle: Implement a new feature across front/back/db for a weird new boss
 description: "Sometimes, you’re being asked to implement a new feature that has implications on both the frontend, the backend, the API, and the database. And if the feature was requested by your new CEO, you have no choice but to comply. Let it sink in, then go do what you’re told!"
 level: intermediate
