@@ -1,6 +1,6 @@
 id: let_it_sink_culture_document
 hints:
-  - Enter this website [https://anythink.wilco.gg/culture-document](https://anythink.wilco.gg/culture-document), mark the checkbox and submit it.
+  - Enter this website [https://app.wilco.gg/culture-document](https://app.wilco.gg/culture-document), mark the checkbox and submit it.
 startFlow:
   do:
     - actionId: bot_message
@@ -13,9 +13,9 @@ startFlow:
             delay: 4000
           - text: "So, from what I understand, he’s about to fire you."
             delay: 4000
-          - text: 'Unless, that is, you’re willing to [sign the pledge](https://anythink.wilco.gg/culture-document) and commit to a "hardcore" work culture.'
+          - text: 'Unless, that is, you’re willing to [sign the pledge](https://app.wilco.gg/culture-document) and commit to a "hardcore" work culture.'
             delay: 3400
-          - text: "So do it, :instruction[**sign [the pledge](https://anythink.wilco.gg/culture-document) right now.**]"
+          - text: "So do it, :instruction[**sign [the pledge](https://app.wilco.gg/culture-document) right now.**]"
             delay: 3000
 trigger:
   type: user_event
